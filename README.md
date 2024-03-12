@@ -1,5 +1,3 @@
-
-```markdown
 # Flutter Excel Localization Generator
 
 [简体中文](README.zh-CN.md) | English
@@ -45,5 +43,3 @@ Contributions are welcome! Please read the contributing guidelines before submit
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```

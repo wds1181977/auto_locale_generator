@@ -24,11 +24,12 @@ dev_dependencies:
 
 ## Usage
 
-1. Create a `locale` directory under your Flutter project's `assets` directory.
-2. Download the provided Excel translation template and make sure not to alter the format. It should contain translations for languages such as Chinese, English, etc.
-3. Export the Excel file to a CSV file and place it in the `locale` directory.
-4. Create a `res` directory under your `lib` directory.
-5. Execute the following command to generate Dart localization files in the `res` directory.
+1. In your Flutter project, create a `locale` folder inside the `assets` directory.
+2. [Download the provided Excel translation template](example/assets/locale/language.xlsx) and ensure the format is not altered. Add your translations within `language.xlsx`. You can refer to the example in the `example` directory.
+3. Export the Excel file to a CSV file, rename it to `language.csv`, and after downloading, open it to check for any extraneous punctuation or line numbers. Then place it in the `locale` directory. You can refer to the example for guidance.
+4. Create a `res` folder inside the `lib` directory of your Flutter project.
+5. Execute the following command to generate Dart localization files in the `res` directory. The input and output directories can be changed as needed. In this example, the input directory is `./assets/locale/language.csv` and the output directory is `lib/res/`.
+6. This initial version currently supports English, Simplified Chinese, and Traditional Chinese. You may clone and add other languages as needed.
 
 ```sh
 flutter pub run auto_locale_generator -i ./assets/locale/language.csv -o lib/res/ -r

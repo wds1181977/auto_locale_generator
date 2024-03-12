@@ -29,7 +29,8 @@ dev_dependencies:
 2. [下载提供的Excel翻译模板](example/assets/locale/language.xlsx)，并确保不更改格式。在language.xlsx中添加翻译。可以参考example中的例子
 3. 将Excel文件导出为CSV文件，修改文件名为language.csv，下载完后打开检查看看有无多余标点和行数，并将其放在`locale`目录中。可以参考example
 4. 在`lib`目录下创建一个`res`文件夹。
-5. 执行以下命令，在`res`目录中生成Dart本地化文件。输入输出目录可以自己更改，本例中呢输入目录'./assets/locale/language.csv' 输出目录'lib/res/'
+5. 执行以下命令，在`res`目录中生成Dart本地化文件。输入输出目录可以自己更改，本例中的输入目录'./assets/locale/language.csv' 输出目录'lib/res/'
+6. 本例子第一版本目前支持英文，简体中文，繁体中文，可自己克隆增加其他语言
 
 ```sh
 flutter pub run auto_locale_generator -i ./assets/locale/language.csv -o lib/res/ -r

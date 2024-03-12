@@ -1,13 +1,15 @@
 name: auto_locale_generator
-description: "A new Flutter project."
+description: "A Flutter plugin that automates the generation of Dart localization maps from translations provided in Excel spreadsheets. Streamline your multilingual app development with quick and easy localization setup"
 version: 0.0.1
-homepage:
+homepage: https://github.com/wds1181977/auto_locale_generator
+
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
   flutter: '>=3.3.0'
 
 dependencies:
+  args: ^2.4.2
   flutter:
     sdk: flutter
   flutter_web_plugins:
@@ -17,11 +19,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
   flutter_lints: ^3.0.0
   # csv to dart
   csv: ^5.1.1
-  # args
-  args: ^2.4.2
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

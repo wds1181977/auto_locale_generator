@@ -1,10 +1,4 @@
-/*
- * @description: Do not edit
- * @Author: wangdognshenng
- * @Date: 2024-01-20 14:25:27
- * @LastEditTime: 2024-03-12 10:40:53
- */
-
+// ignore_for_file: avoid_print
 import 'dart:io';
 
 class CsvParser {

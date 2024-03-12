@@ -17,35 +17,19 @@ dependencies:
   flutter:
     sdk: flutter
 
-  auto_locale_generator:
-    # When depending on this package from a real application you should use:
-    #   auto_locale_generator: ^x.y.z
-    # See https://dart.dev/tools/pub/dependencies#version-constraints
-    # The example app is bundled with the plugin so we use a path dependency on
-    # the parent directory to use the current plugin's version.
-    path: ../
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
 
 dev_dependencies:
-  integration_test:
-    sdk: flutter
-  flutter_test:
-    sdk: flutter
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  build_runner: '>=2.3.0 <4.0.0'
+  auto_locale_generator:
+    path: ../
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
 flutter:
 
   # The following line ensures that the Material Icons font is

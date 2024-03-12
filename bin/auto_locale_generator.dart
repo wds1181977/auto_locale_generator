@@ -1,7 +1,7 @@
 /*
  * @author: wds
  * @description: 
- * @LastEditTime: 2024-03-12 10:24:27
+ * @LastEditTime: 2024-03-12 14:05:30
  */
 import 'package:args/args.dart';
 import 'package:auto_locale_generator/csv_parser.dart';

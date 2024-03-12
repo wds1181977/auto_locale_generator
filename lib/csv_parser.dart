@@ -54,19 +54,19 @@ class CsvParser {
         print('Warning: The translation for ID.$name is empty...');
       }
 
-      // 添加到ID类
+      // add ID Map
       idFileBuffer.writeln('  static const String $name = \'$value\';');
 
-      // 添加到中文Map
+      // add zh Map
       zhFileBuffer.writeln('  ID.$name: \'$zh\',');
 
-      // 添加到英文Map
+      // add en Map
       enFileBuffer.writeln('  ID.$name: \'$en\',');
 
-      // 添加到台湾Map
+      // add tw Map
       twFileBuffer.writeln('  ID.$name: \'$tw\',');
 
-      // 添加到香港Map
+      // add hk Map
       hkFileBuffer.writeln('  ID.$name: \'$hk\',');
     }
 

@@ -1,3 +1,8 @@
+<!--
+ * @author: wds
+ * @description: 
+ * @LastEditTime: 2024-08-12 10:47:02
+-->
 
 # Flutter 多语言自动化本地化生成器
 
@@ -20,7 +25,7 @@
 
 ```yaml
 dev_dependencies:
-  auto_locale_generator: ^0.0.1
+  auto_locale_generator: ^0.0.2
 ```
 
 ## 使用方法

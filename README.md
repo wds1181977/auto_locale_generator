@@ -19,7 +19,7 @@ To use this plugin, add `auto_locale_generator` as a [dev_dependency](https://da
 
 ```yaml
 dev_dependencies:
-  auto_locale_generator: ^0.0.1
+  auto_locale_generator: ^0.0.2
 ```
 
 ## Usage

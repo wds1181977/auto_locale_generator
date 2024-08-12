@@ -22,6 +22,7 @@ class CsvParser {
     final enFileBuffer = StringBuffer();
     final twFileBuffer = StringBuffer();
     final hkFileBuffer = StringBuffer();
+    final jaFileBuffer = StringBuffer();
 
     idFileBuffer.writeln('class ID {');
     zhFileBuffer.writeln(
@@ -32,12 +33,13 @@ class CsvParser {
         'import \'strings.dart\'; \n  // zh_tw\nconst Map<String, String> localizedValueZHTW = {');
     hkFileBuffer.writeln(
         'import \'strings.dart\'; \n  // zh_hk\nconst Map<String, String> localizedValueZHHK = {');
-
+    jaFileBuffer.writeln(
+        'import \'strings.dart\'; \n  // ja_jp\nconst Map<String, String> localizedValueJAJP = {');
     print('read value...');
     for (final line in lines) {
       final values = parseCsvLine(line);
 
-      if (values.length < 4) continue;
+      if (values.length < 5) continue;
 
       final name = values[0].trim();
       final value = values[1].trim();
@@ -45,12 +47,18 @@ class CsvParser {
       final en = values[3].trim();
       final tw = values[4].trim();
       final hk = values[5].trim();
+      final ja = values[6].trim();
 
       if (name.isEmpty || value.isEmpty) {
         print('Warning: ‘name’ has empty data');
       }
 
-      if (zh.isEmpty || zh.isEmpty || en.isEmpty || tw.isEmpty || hk.isEmpty) {
+      if (zh.isEmpty ||
+          zh.isEmpty ||
+          en.isEmpty ||
+          tw.isEmpty ||
+          hk.isEmpty ||
+          ja.isEmpty) {
         print('Warning: The translation for ID.$name is empty...');
       }
 
@@ -68,6 +76,9 @@ class CsvParser {
 
       // add hk Map
       hkFileBuffer.writeln('  ID.$name: \'$hk\',');
+
+      // add ja Map
+      jaFileBuffer.writeln('  ID.$name: \'$ja\',');
     }
 
     idFileBuffer.writeln('}');
@@ -75,6 +86,7 @@ class CsvParser {
     enFileBuffer.writeln('};');
     twFileBuffer.writeln('};');
     hkFileBuffer.writeln('};');
+    jaFileBuffer.writeln('};');
 
     print('write strings...');
     await File('${outPath}strings.dart').writeAsString(idFileBuffer.toString());
@@ -91,6 +103,9 @@ class CsvParser {
     await File('${outPath}strings.zh_hk.dart')
         .writeAsString(hkFileBuffer.toString());
 
+    print('write strings_ja...');
+    await File('${outPath}strings.ja_jp.dart')
+        .writeAsString(jaFileBuffer.toString());
     print('--------Language generation successful-------');
   }
 

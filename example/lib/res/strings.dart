@@ -8,6 +8,4 @@ class ID {
   static const String stringPhone = 'stringPhone';
   static const String stringEmail = 'stringEmail';
   static const String stringLoginpassword = 'stringLoginpassword';
-  static const String stringAccount = 'stringAccount';
-  static const String stringNickname = 'stringNickname';
 }

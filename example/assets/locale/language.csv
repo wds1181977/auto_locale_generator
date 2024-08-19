@@ -1,12 +1,10 @@
-Name,value,en(英语),zh(中文),zh_tw(台湾),zh_tw(香港),ja_jp(日语)
-settingLanguageDefault,settingLanguageDefault,Follow System,跟随系统,跟隨系統,跟隨系統,フォローアップシステム
-stringConfirm,stringConfirm,Confirm,确认,確認,確認,確認
-stringCancel,stringCancel,Cancel,取消,取消,取消,キャンセル
-stringDiscover,stringDiscover,Discover,发现,發現,發現,検出
-stringAvatar,stringAvatar,Profile Photo,头像,頭像,頭像,アイコン
-stringUid,stringUid,UID,UID,UID,UID,UID
-stringPhone,stringPhone,Phone,电话,電話,電話,電話番号
-stringEmail,stringEmail,Email,邮箱,郵箱,郵箱,メールボックス
-stringLoginpassword,stringLoginpassword,Login Password,登录密码,登入密碼,登入密碼,ログインパスワード
-stringAccount,stringAccount,Account,账号,帳號,帳號,アカウント
-stringNickname,stringNickname,Nickname,昵称,昵稱,昵稱,ニックネーム
+﻿Name,value,zh(中文),en(英语),zh_hk(香港),ja_jp(日语)
+settingLanguageDefault,settingLanguageDefault,跟随系统,Follow System,跟隨系統,フォローシステム
+stringConfirm,stringConfirm,确认,Confirm,確認,確認
+stringCancel,stringCancel,取消,Cancel,取消,キャンセル
+stringDiscover,stringDiscover,发现,Discover,發現,発見
+stringAvatar,stringAvatar,头像,Avatar,头像,アバター
+stringUid,stringUid,UID,UID,UID,UID
+stringPhone,stringPhone,电话,Phone,電話,電話
+stringEmail,stringEmail,邮箱,Email,郵箱,メール
+stringLoginpassword,stringLoginpassword,登录密码,Login Password,登錄密碼,ログインパスワード

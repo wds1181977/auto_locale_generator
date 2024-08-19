@@ -20,7 +20,6 @@ class CsvParser {
     final idFileBuffer = StringBuffer();
     final zhFileBuffer = StringBuffer();
     final enFileBuffer = StringBuffer();
-    final twFileBuffer = StringBuffer();
     final hkFileBuffer = StringBuffer();
     final jaFileBuffer = StringBuffer();
 
@@ -29,8 +28,6 @@ class CsvParser {
         'import \'strings.dart\'; \n  // zh\nconst Map<String, String> localizedValueZH = {');
     enFileBuffer.writeln(
         'import \'strings.dart\'; \n  // en\nconst Map<String, String> localizedValueEN = {');
-    twFileBuffer.writeln(
-        'import \'strings.dart\'; \n  // zh_tw\nconst Map<String, String> localizedValueZHTW = {');
     hkFileBuffer.writeln(
         'import \'strings.dart\'; \n  // zh_hk\nconst Map<String, String> localizedValueZHHK = {');
     jaFileBuffer.writeln(
@@ -39,26 +36,20 @@ class CsvParser {
     for (final line in lines) {
       final values = parseCsvLine(line);
 
-      if (values.length < 5) continue;
+      if (values.length < 4) continue;
 
       final name = values[0].trim();
       final value = values[1].trim();
       final zh = values[2].trim();
       final en = values[3].trim();
-      final tw = values[4].trim();
       final hk = values[5].trim();
-      final ja = values[6].trim();
+      final ja = values[5].trim();
 
       if (name.isEmpty || value.isEmpty) {
         print('Warning: ‘name’ has empty data');
       }
 
-      if (zh.isEmpty ||
-          zh.isEmpty ||
-          en.isEmpty ||
-          tw.isEmpty ||
-          hk.isEmpty ||
-          ja.isEmpty) {
+      if (zh.isEmpty || zh.isEmpty || en.isEmpty || hk.isEmpty || ja.isEmpty) {
         print('Warning: The translation for ID.$name is empty...');
       }
 
@@ -71,9 +62,6 @@ class CsvParser {
       // add en Map
       enFileBuffer.writeln('  ID.$name: \'$en\',');
 
-      // add tw Map
-      twFileBuffer.writeln('  ID.$name: \'$tw\',');
-
       // add hk Map
       hkFileBuffer.writeln('  ID.$name: \'$hk\',');
 
@@ -84,7 +72,6 @@ class CsvParser {
     idFileBuffer.writeln('}');
     zhFileBuffer.writeln('};');
     enFileBuffer.writeln('};');
-    twFileBuffer.writeln('};');
     hkFileBuffer.writeln('};');
     jaFileBuffer.writeln('};');
 
@@ -96,9 +83,6 @@ class CsvParser {
     print('write strings_en......');
     await File('${outPath}strings.en.dart')
         .writeAsString(enFileBuffer.toString());
-    print('write strings_tw...');
-    await File('${outPath}strings.zh_tw.dart')
-        .writeAsString(twFileBuffer.toString());
     print('write strings_hk...');
     await File('${outPath}strings.zh_hk.dart')
         .writeAsString(hkFileBuffer.toString());

@@ -42,7 +42,7 @@ class CsvParser {
       final value = values[1].trim();
       final zh = values[2].trim();
       final en = values[3].trim();
-      final hk = values[5].trim();
+      final hk = values[4].trim();
       final ja = values[5].trim();
 
       if (name.isEmpty || value.isEmpty) {
